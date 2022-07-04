@@ -168,17 +168,17 @@ namespace EMotionFX
                     if (activeObjects.m_frameNr == static_cast<AZ::u32>(frame))
                     {
                         // Check which states and transitions are active and compare it to the expected ones.
-                        EXPECT_EQ(activeObjects.m_stateA, compareAgainst.m_stateA)
+                        EXPECT_EQ(compareAgainst.m_stateA, activeObjects.m_stateA)
                             << "State A expected to be " << (activeObjects.m_stateA ? "active." : "inactive.");
-                        EXPECT_EQ(activeObjects.m_stateB, compareAgainst.m_stateB)
+                        EXPECT_EQ(compareAgainst.m_stateB, activeObjects.m_stateB)
                             << "State B expected to be " << (activeObjects.m_stateB ? "active." : "inactive.");
-                        EXPECT_EQ(activeObjects.m_stateC, compareAgainst.m_stateC)
+                        EXPECT_EQ(compareAgainst.m_stateC, activeObjects.m_stateC)
                             << "State C expected to be " << (activeObjects.m_stateB ? "active." : "inactive.");
-                        EXPECT_EQ(activeObjects.m_transitionLeft, compareAgainst.m_transitionLeft)
+                        EXPECT_EQ(compareAgainst.m_transitionLeft, activeObjects.m_transitionLeft)
                             << "Transition Start->A expected to be " << (activeObjects.m_transitionLeft ? "active." : "inactive.");
-                        EXPECT_EQ(activeObjects.m_transitionMiddle, compareAgainst.m_transitionMiddle)
+                        EXPECT_EQ(compareAgainst.m_transitionMiddle, activeObjects.m_transitionMiddle)
                             << "Transition Start->B expected to be " << (activeObjects.m_transitionMiddle ? "active." : "inactive.");
-                        EXPECT_EQ(activeObjects.m_transitionRight, compareAgainst.m_transitionRight)
+                        EXPECT_EQ(compareAgainst.m_transitionRight, activeObjects.m_transitionRight)
                             << "Transition Start->C expected to be " << (activeObjects.m_transitionRight ? "active." : "inactive.");
 
                         // Check anim graph events.
